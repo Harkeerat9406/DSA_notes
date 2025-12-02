@@ -1,3 +1,13 @@
+/*TIME COMPLEXITIES 
+1) Bubble Sort – O(n²)
+2) Selection Sort – O(n²)
+3) Insertion Sort – O(n²)
+4) Quick Sort – O(n²)
+5) Merge Sort – O(n log n)
+6) Heap Sort – O(n log n)
+*/
+
+
 /*MERGE SORT
 We keep dividing the array into 2 halves using recursion until only array of size 1 is left. When we get it, we 
 merge the two halves while sorting them.
@@ -138,3 +148,82 @@ public class sorting
         System.out.println("After sorting: " + Arrays.toString(arr));
     }
 }
+
+
+
+/* SELECTION SORT
+Find min or max first using inner loop and then swap outside it.*/
+
+// public class SelectionSort {
+//     public static void selectionSort(int[] arr) {
+//         int n = arr.length;
+
+//         for (int i = 0; i < n - 1; i++) {
+//             int minIndex = i;
+
+//             // Find the index of the smallest element in the unsorted part
+//             for (int j = i + 1; j < n; j++) {
+//                 if (arr[j] < arr[minIndex]) {
+//                     minIndex = j;
+//                 }
+//             }
+
+//             // Swap the found minimum with the first unsorted element
+//             int temp = arr[minIndex];
+//             arr[minIndex] = arr[i];
+//             arr[i] = temp;
+//         }
+//     }
+// }
+
+
+
+/*BUBBLE SORT
+We keep swapping in the inner loop*/
+
+// public class BubbleSort {
+//     public static void bubbleSort(int[] arr) {
+//         int n = arr.length;
+
+//         for (int i = 0; i < n - 1; i++) {
+//             boolean swapped = false;
+
+//             // Compare adjacent elements
+//             for (int j = 0; j < n - 1 - i; j++) {
+//                 if (arr[j] > arr[j + 1]) {
+//                     int temp = arr[j];
+//                     arr[j] = arr[j + 1];
+//                     arr[j + 1] = temp;
+//                     swapped = true;
+//                 }
+//             }
+
+//             // If no elements were swapped, array is already sorted
+//             if (!swapped) break;
+//         }
+//     }
+// }
+
+
+
+/*INSERTION SORT
+We select each element one by one and insert it at its correct position in the array */
+
+// public class InsertionSort {
+//     public static void insertionSort(int[] arr) {
+//         int n = arr.length;
+
+//         for (int i = 1; i < n; i++) {
+//             int key = arr[i];
+//             int j = i - 1;
+
+//             // Move elements greater than key to one position ahead
+//             while (j >= 0 && arr[j] > key) {
+//                 arr[j + 1] = arr[j];
+//                 j--;
+//             }
+
+//             arr[j + 1] = key;
+//         }
+//     }
+// }
